@@ -5,15 +5,19 @@ import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
 
 import tailwind from "@astrojs/tailwind";
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astro-theme-cody.netlify.app',
   integrations: [mdx(), sitemap(), tailwind()],
+
   // NOTE: Make sure this matches your supported languages in the file: src/consts.ts
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr"]
   },
+
   markdown: {
     remarkPlugins: [remarkReadingTime],
     syntaxHighlight: 'shiki',
@@ -25,6 +29,7 @@ export default defineConfig({
       },
     }
   },
+
+  output: 'server',
+  adapter: netlify(),
 });
-
-

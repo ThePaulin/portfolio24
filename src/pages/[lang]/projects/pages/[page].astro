@@ -15,6 +15,8 @@ interface Props {
 	page: Page<CollectionEntry<"project">>;
 }
 
+export const prerender = true;
+
 export const getStaticPaths = (async ({ paginate }) => {
 	const allProjects = await getCollection("project", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;

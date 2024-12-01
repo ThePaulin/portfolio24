@@ -18,6 +18,8 @@ import PostPreview from "@/components/blog/PostPreviewA";
 import Pagination from "@/components/Pagination";
 import { siteConfig } from "src/consts";
 
+export const prerender = true;
+
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 	const allPosts = await getAllPosts();
 	const allPostsByDate = sortMDByDate(allPosts);

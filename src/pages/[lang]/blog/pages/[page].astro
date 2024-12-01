@@ -15,6 +15,8 @@ import {
 } from "@/utils";
 import { siteConfig } from "src/consts";
 
+export const prerender = true;
+
 export const getStaticPaths = (async ({ paginate }) => {
 	// grab all posts besides drafts and hidden ones
 	const allPosts = await getAllPosts(true);
