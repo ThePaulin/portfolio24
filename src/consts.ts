@@ -26,7 +26,7 @@ type SocialLink = {
 
 export const SUPPORTED_LANGUAGES = {
   'en': 'en',
-  'es': 'es'
+  'fr': 'fr'
 };
 
 export const DEFAULT_LANG = SUPPORTED_LANGUAGES.en as SupportedLanguage;
@@ -36,7 +36,7 @@ export const siteConfig: Config = {
   description: ui[DEFAULT_LANG]["site.description"].text,
   lang: DEFAULT_LANG,
   profile: {
-    author: "Amy Dang",
+    author: "Paulin Kubwira",
     description: ui[DEFAULT_LANG]["profile.description"].text
   },
   settings: {
@@ -53,26 +53,32 @@ export const SOCIAL_LINKS: Array<SocialLink> = [
   {
     icon: "mdi:github",
     friendlyName: "Github",
-    link: "https://github.com/kirontoo/astro-theme-cody",
+    link: "https://github.com/ThePaulin",
   },
   {
     icon: "mdi:linkedin",
     friendlyName: "LinkedIn",
-    link: "#",
+    link: "https://www.linkedin.com/in/paulin-kubwira-249489228/",
   },
   {
     icon: "mdi:email",
     friendlyName: "email",
-    link: "mailto:ndangamy@gmail.com",
+    link: "mailto:kubwirapaulin@gmail.com",
   },
-  {
-    icon: "mdi:rss",
-    friendlyName: "rss",
-    link: "/rss.xml"
-  }
+  // {
+  //   icon: "mdi:rss",
+  //   friendlyName: "rss",
+  //   link: "/rss.xml"
+  // }
 ];
 
 // NOTE: match these entries with keys in `src/i18n/nav.ts`
 export const NAV_LINKS: Array<keyof typeof nav[SupportedLanguage]> = [
-  "home", "about", "blog", "projects", "archive"
+  "home", 
+  "about", 
+  "blog", 
+  // "projects", 
+  // "archive"
 ];
+
+export const IMAGE_KIT_ENDPOINT_URL: string = "https://ik.imagekit.io/thepaulin/";

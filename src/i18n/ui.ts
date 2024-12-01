@@ -9,13 +9,13 @@ import type { SupportedLanguage } from "src/utils/i18n";
 export default {
     "en": {
         "site.title": {
-            text: "Astro Theme Cody"
+            text: "Paulin Kubwira"
         },
         "site.description": {
-            text: "A minimalist blog theme built with Astro. A quick and easy starter build for anyone who wants to start their own blog."
+            text: "My name is Paulin Kubwira, I'm a full stack web developer. Let's buiild something awesome together!"
         },
         "profile.description": {
-            text: "your bio description"
+            text: "My name is Paulin Kubwira, I'm a full stack web developer. Let's buiild something awesome together!"
         },
         "blog.lastUpdated": {
             text: "Last updated:"
@@ -33,30 +33,30 @@ export default {
             text: "WEBSITE"
         }
     },
-    "es": {
+    "fr": {
         "site.title": {
-            text: "Astro Theme Cody"
+            text: "Paulin Kubwira"
         },
         "site.description": {
-            text: "Un tema de blog minimalista creado con Astro. Un tema de inicio rápido y sencillo para cualquiera que quiera crear su propio blog."
+            text: "Je m'appelle Paulin Kubwira, je suis développeur web full stack. Bâtissons ensemble quelque chose de génial !"
         },
         "profile.description": {
-            text: "tu descripción biográfica"
+            text: "Je m'appelle Paulin Kubwira, je suis développeur web full stack. Bâtissons ensemble quelque chose de génial !"
         },
         "blog.lastUpdated": {
-            text: "Última actualización:"
+            text: "Dernièrement mis à jour:"
         },
         "sidebar.tableOfContents": {
-            text: "Tabla de contenidos"
+            text: "Table des matières"
         },
         "project.platform": {
-            text: "PLATAFORMA"
+            text: "PLATFORME"
         },
         "project.stack": {
-            text: "PILA"
+            text: "STACK"
         },
         "project.website": {
-            text: "WEBSITE"
+            text: "SITE WEB"
         }
     }
 } as const satisfies TranslationUIEntries;

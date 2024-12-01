@@ -1,0 +1,25 @@
+---
+import type { PortfolioProjectType } from 'src/pages/en/about.astro';
+
+const listItemClassNames = "ml-0 xl:ml-12 flex flex-col justify-start xl:max-w-[600px]";
+const linkSectionClassNames = "flex gap-x-6 mt-2 text-accent";
+export const h3ClassNames = "text-base mb-2"
+
+interface Props {
+    project: PortfolioProjectType
+}
+
+const {project}  = Astro.props;
+
+---
+
+<li class={listItemClassNames}>
+    <h3 class={h3ClassNames}>
+        <strong class="text-accent">{project.title.name}</strong> - <span>{project.title.desc}</span>
+    </h3>
+    <p>{project.fullDesc}</p>
+    <span class={linkSectionClassNames}>
+        <a class="font-bold underline" target="_blank" href={project.siteUrl}>View website</a>
+        {project.gitUrl ? <a class="font-bold underline" target="_blank" href={project.gitUrl}>View on Github</a> : <></> }
+    </span>
+</li>

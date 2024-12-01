@@ -8,22 +8,23 @@
     /* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
     --theme-bg: #efefef;
     --theme-text: #222222;
-    --theme-accent: #dd7878;
+    --theme-accent:#812ae4;
     --theme-accent-2: #bcc0cd;
     --theme-surface: #e6e6e6;
-    --theme-quote: #dd7878;
-    --theme-highlight: #dd7878;
+    --theme-quote: #812ae4;
+    --theme-highlight: #812ae4;
+    /* #AD80E0 */
   }
 
   :root.dark {
     color-scheme: dark;
     --theme-bg: #1d1d1d;
     --theme-text: #ededed;
-    --theme-accent: #93e1d4;
+    --theme-accent: #B3E080;
     --theme-accent-2: #545454;
     --theme-surface: #2f2f2f;
-    --theme-quote: #93e1d4;
-    --theme-highlight: #93e1d4;
+    --theme-quote: #B3E080;
+    --theme-highlight: #B3E080;
   }
 
   html {

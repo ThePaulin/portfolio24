@@ -1,5 +1,62 @@
 ---
+import PortfolioGetInTouch from "@/components/PortfolioGetInTouch";
+import PortfolioProjectCard, { h3ClassNames } from "@/components/PortfolioProjectCard";
 import Layout from "@/layouts/Base";
+
+export const titleClassNames = "title my-8"
+
+export type PortfolioProjectType = {
+	title: {
+		name: string;
+		desc: string;
+	},
+	fullDesc: string;
+	siteUrl: string;
+	gitUrl?: string;
+}
+
+const projects: PortfolioProjectType[] = [
+	{
+		title: {
+			name: "CribsKGL",
+			desc: "Real Estate Website"
+		},
+		fullDesc: "Designed and developed using Figma and Next.js respectively. Uses Sanity.io, MongoDB and Next Auth 13. Built with highly re-usable, accessible and responsive components.",
+		siteUrl: "https://cribskgl.vercel.app/",
+		gitUrl: "https://github.com/ThePaulin/real-estate-site"
+	},
+	{
+		title: {
+			name: "Rare Finds Leather Bags",
+			desc: "E-Commerce Website"
+		},
+		fullDesc: "Fully functional e-commerce website. Developed using Next.js and Sanity.io. Uses Stripe inrtegration to process payments in a secure and straight forward process.",
+		siteUrl: "https://e-commerce-sanity-stripe-thepaulin.vercel.app/",
+		gitUrl: "https://github.com/ThePaulin/e_commerce-sanity-stripe"
+	},
+]
+
+const bixlersJobDescriptions = [
+	'Develop and maintain robust and scalable Shopify ecommerce web applications, leveraging cutting-edge front-end (React JS through Shopify Hydrogen framework) and back-end technologies (Node JS).',
+	'Collaborate with cross-functional teams, gathering requirements and expertly translating them into technical solutions.',
+	'Implemente responsive, accessible and user-friendly interfaces.',
+	'Utilize Agile (Jira) and Sonar Cloud to streamline development , improve productivity and improve code quality by 85%.',
+	'Resolve technical issues promptly, minimizing disruptions to project timelines.',
+	'Conduct testing, debugging, and integrated third-party services and APIs (REST APIs and GraphQL APIs)',
+	'Actively participate in code reviews, ensuring code quality and consistency.',
+	'Stay up to date with emerging web development trends and technologies.',
+]
+
+const skills = [
+	'JavaScript/TypeScript',
+	'HTML, CSS',
+	'React, Remix, Next.js, Astro, Angular',
+	'Node.js (Express), Go (Gin), Python (Flask)',
+	'Unit & E2E testing (Vite test, Jest, Cypress)',
+	'C#(ASP.NET)',
+	'AWS, GCP, Azule, Shopify Oxygen, Netlify, Vercel',
+
+]
 ---
 
 <Layout
@@ -7,38 +64,43 @@ import Layout from "@/layouts/Base";
 	description="Lorem ipsum dolor sit amet"
 	image="/blog-placeholder-about.jpg"
 >
-	<h1 class="title">About</h1>
+	<div class="mb-8 flex items-center justify-end border border-accent ">
+		<img class="size-full xl:size-[300px]" src="https://ik.imagekit.io/thepaulin/profile.4b2bbc9a463700b9bf98.png?updatedAt=1733003668030" />
+	</div>
+	<h1 class={titleClassNames}>ABOUT ME</h1>
 	<p>
-		Hi, I'm a Astro theme. I'm particularly great for starting a blog or a
-		portfolio.
-		<div>
-			I was based on two other themes:
-			<a
-				class="cody-link"
-				href="https://astro-theme-cactus.netlify.app"
-				target="_blank"
-				rel="noopener noreferrer">Astro Cactus</a
-			>
-			and
-			<a
-				class="cody-link"
-				target="_blank"
-				rel="noopener noreferrer"
-				href="https://risotto.joeroe.io">Risotto</a
-			>.
-		</div>
+		Hi!👋 My name is <strong>Paulin Kubwira</strong>, I'm a full stack web developer with over 4 years of experience.
+		I had a chance to work diverse projects that challenged my skills for both collaboration, communication,
+		project management as well as technical skills.
 	</p>
+	<PortfolioGetInTouch language="en" />
+	<a class="text-accent underline" href="https://ik.imagekit.io/thepaulin/CV-Paulin%20Kubwira-12-24.pdf?updatedAt=1733090102081" target="_blank">View & download my Resumé</a>
 
-	<h2 class="title mt-4">Here are my built-in features:</h2>
-	<ul class="list-inside list-disc">
-		<li>Looks great on any device</li>
-		<li>Fully Responsive</li>
-		<li>Comes light and dark mode</li>
-		<li>Easy to customize and add content</li>
-		<li>Built with tailwindcss</li>
-		<li>Pin posts and projects</li>
+	<h2 class={titleClassNames}>PROJECTS</h2>
+	<ul class="list-inside list-disc flex flex-col gap-y-12">
+		{
+			projects.map((project) => (<PortfolioProjectCard project={project} />))
+		}
 	</ul>
-	<p class="mt-4">
+	<h2 class={titleClassNames}>SKILLS</h2>
+	<ul class="list-inside list-disc pl-6">
+		{
+			skills?.map( (el) => (<li>{el}</li>))
+		}
+	</ul>
+	<h2 class={titleClassNames}>WORK</h2>
+	<ul class="list-inside list-disc">
+		<li class="flex flex-col pl-6"> 
+			<h3 class={h3ClassNames}><strong class="text-accent">Bixlers</strong> - Full Stack Web developer (<a class="underline text-accent" href="https://www.bixlers.com" target="_blank">bixlers.com</a>, <a class="underline text-accent" href="https://www.perrywinkles.com" target="_blank">perrywinkles.com</a>)</h3>
+			<ul class="ist-inside list-disc pl-6 flex flex-col gap-2">
+				{
+					bixlersJobDescriptions?.map( (el) => (<li>{el}</li>))
+				}
+			</ul>
+		</li>
+	</ul>
+	<!-- TODO: get in touch section -->
+	<!-- <p class="mt-4">
 		Clone or fork my
 		<a
 			class="cody-link inline-block"
@@ -50,5 +112,7 @@ import Layout from "@/layouts/Base";
 			repo
 		</a>
 		if you like me!
-	</p>
+	</p> -->
 </Layout>
+
+

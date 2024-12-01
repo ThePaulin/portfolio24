@@ -15,7 +15,7 @@ export default {
             slug: ""
         },
         "about": {
-            text: "About",
+            text: "About me",
             slug: "about"
         },
         "blog": {
@@ -41,13 +41,13 @@ export default {
             slug: "series"
         }
     },
-    "es": {
+    "fr": {
         "home": {
-            text: "Página Principal",
+            text: "Accueil",
             slug: ""
         },
         "about": {
-            text: "Acerca De",
+            text: "À propos de moi",
             slug: "about"
         },
         "blog": {
@@ -56,20 +56,20 @@ export default {
             route: "/blog/pages/1"
         },
         "projects": {
-            text: "Proyectos",
+            text: "Projets",
             slug: "projects",
             route: "/projects/pages/1"
         },
         "archive": {
-            text: "Archivo",
+            text: "Archive",
             slug: "archive"
         },
         "tags": {
-            text: "Etiquetas",
+            text: "Etiquetes",
             slug: "tags"
         },
         "series": {
-            text: "Serie",
+            text: "Series",
             slug: "series"
         }
     }

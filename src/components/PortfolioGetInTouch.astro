@@ -1,0 +1,21 @@
+---
+import SocialMediaLinks from "./SocialMediaLinks.astro";
+
+type Props = {
+    language: 'en' | 'fr'
+}
+
+const {language} = Astro.props;
+const title = {
+    fr: 'Construisons ensemble quelque chose de génial!🚀',
+    en: "Let's build something awesome together!🚀"
+}
+
+
+---
+<div class="my-8 w-full flex justify-center">
+    <div class="flex flex-col items-center justify-center gap-y-4">
+        <span>{title[language]}</span>
+        <SocialMediaLinks />
+    </div>
+</div>

@@ -15,37 +15,37 @@ const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts);
 const allPostsByPinned = sortMDByPinned(allPostsByDate);
-const filteredPostsByLanguage = filterByLanguage(allPostsByPinned, "en").slice(0, MAX_POSTS);
+const filteredPostsByLanguage = filterByLanguage(allPostsByPinned, "fr").slice(0, MAX_POSTS);
 
 const tech: Array<{ title: string; desc: string; href: string }> = [
 	{
 		title: "Astro",
-		desc: "Build fast websites, faster.",
+		desc: "Crea sitios web rápidos, más rápido.",
 		href: "https://astro.build",
 	},
 	{
 		title: "Astro Assets",
-		desc: "Built-in optimized asset support.",
+		desc: "Compatibilidad con activos optimizados integrados.",
 		href: "https://docs.astro.build/en/guides/assets/",
 	},
 	{
 		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
+		desc: "Crea sitios web modernos rápidamente sin tener que abandonar el HTML.",
 		href: "https://tailwindcss.com",
 	},
 	{
 		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
+		desc: "Lenguaje de marcado simple y fácil de usar.",
 		href: "https://www.markdownguide.org/",
 	},
 	{
 		title: "MDX",
-		desc: "Markdown for the component era.",
+		desc: "Markdown para la era de los componentes.",
 		href: "https://mdxjs.com/",
 	},
 	{
 		title: "Astro Icon",
-		desc: "An easy to use Icon component for Astro.",
+		desc: "Un componente de ícono fácil de usar para Astro.",
 		href: "https://github.com/natemoo-re/astro-icon#readme",
 	},
 ];
@@ -55,15 +55,15 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 	<section>
 		<h1 class="title">Hello World</h1>
 		<p class="mb-4 sm:mb-8">
-			Hi!👋 My name is <strong>Paulin Kubwira</strong>, I'm a full stack web developer with over 4 years of experience.
-		I had a chance to work diverse projects that challenged my skills for both collaboration, communication,
-		project management as well as technical skills.
-	</p>
-	<PortfolioGetInTouch language="en" />
+			Salut! Je m'appelle <strong>Paulin Kubwira</strong>, je suis un développeur web full stack avec plus de 4 ans d'expérience.
+		J'ai eu la chance de travailler sur divers projets qui ont mis à l'épreuve mes compétences en matière de collaboration, de communication,
+gestion de projet ainsi que des compétences techniques.
+		</p>
+		<PortfolioGetInTouch language="fr" />
 	</section>
 
 	<section class="mt-8 sm:mt-16">
-		<h2 class="title">Posts</h2>
+		<h2 class="title">Articles</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				filteredPostsByLanguage.map((p) => (
@@ -73,7 +73,7 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 		</ul>
 	</section>
 
-	<!-- <section class="mt-16">
+	<!-- <section class="mt-16 mb-4">
 		<h2 class="title">Technologies</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
@@ -92,5 +92,10 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 				))
 			}
 		</ul>
+	</section> -->
+
+	<!-- <hr />
+	<section class="">
+		<p>Esto fue traducido usando Google Translate</p>
 	</section> -->
 </BaseLayout>
