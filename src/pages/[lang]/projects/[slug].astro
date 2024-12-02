@@ -9,6 +9,8 @@ import {
 	type SupportedLanguage,
 } from "@/utils";
 
+export const prerender = true;
+
 export const getStaticPaths = (async () => {
 	const allProjects = await getCollection("project", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
