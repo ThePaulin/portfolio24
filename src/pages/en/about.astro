@@ -1,4 +1,6 @@
 ---
+import GradientBlocks from "@/components/GradientBlocks";
+import ItemRender from "@/components/ItemRender";
 import PortfolioGetInTouch from "@/components/PortfolioGetInTouch";
 import PortfolioProjectCard, { h3ClassNames } from "@/components/PortfolioProjectCard";
 import Layout from "@/layouts/Base";
@@ -37,26 +39,45 @@ const projects: PortfolioProjectType[] = [
 ]
 
 const bixlersJobDescriptions = [
-	'Develop and maintain robust and scalable Shopify ecommerce web applications, leveraging cutting-edge front-end (React JS through Shopify Hydrogen framework) and back-end technologies (Node JS).',
-	'Collaborate with cross-functional teams, gathering requirements and expertly translating them into technical solutions.',
-	'Implemente responsive, accessible and user-friendly interfaces.',
-	'Utilize Agile (Jira) and Sonar Cloud to streamline development , improve productivity and improve code quality by 85%.',
-	'Resolve technical issues promptly, minimizing disruptions to project timelines.',
-	'Conduct testing, debugging, and integrated third-party services and APIs (REST APIs and GraphQL APIs)',
-	'Actively participate in code reviews, ensuring code quality and consistency.',
-	'Stay up to date with emerging web development trends and technologies.',
+	'Architect, develop, and maintain high-performance, scalable Shopify eCommerce applications using modern front-end (React.js with Shopify Hydrogen) and back-end (Node.js) technologies.',
+	'Partner with cross-functional teams to elicit requirements, translating them into robust technical solutions with a focus on scalability and maintainability.',
+	'Design and implement responsive, accessible, and intuitive user interfaces, adhering to WCAG standards and optimizing for cross-device compatibility.',
+	'Leverage Agile methodologies (Jira) and SonarCloud to enhance development workflows, driving 85% improvement in code quality metrics and accelerating delivery timelines.',
+	'Proactively diagnose and resolve complex technical issues, ensuring minimal impact on project milestones and production stability.',
+	'Conduct rigorous testing, debugging, and seamless integration of third-party services via REST and GraphQL APIs, ensuring system reliability and performance.',
+	'Lead and contribute to code reviews, enforcing coding standards, improving maintainability, and fostering a culture of technical excellence.',
+	'Stay ahead of industry trends, evaluating and adopting emerging web development technologies to maintain a competitive edge.',
 ]
 
 const skills = [
-	'JavaScript/TypeScript',
-	'HTML, CSS',
-	'React, Remix, Next.js, Astro, Angular',
-	'Node.js (Express), Go (Gin), Python (Flask)',
-	'Unit & E2E testing (Vite test, Jest, Cypress)',
-	'C#(ASP.NET)',
-	'AWS, GCP, Azule, Shopify Oxygen, Netlify, Vercel',
+	'JavaScript/TypeScript, Python, Go, C#, PHP, Java, C/C++ [LANGUAGES]',
+	'HTML, CSS [WEB SPECIFIC]',
+	'React, Remix, Next.js, Astro, Angular [JAVASCRIPT FRAMEWORKS]',
+	'Node.js (Express), C#(ASP.NET), Go (Gin), Python (Flask) [BACKEND FRAMEWORKS]',
+	'Unit & E2E testing (Vite test, Jest, Cypress) [TESTING]',
+	'AWS, GCP, Azule, Shopify Oxygen, Netlify, Vercel [CLOUD PLATFORMS]',
 
 ]
+
+// const pattern =  /\[[a-zA-Z0-9_ ]+\]/g
+// // new RegExp(`\[[a-zA-Z]+\]$`);  //\[[a-zA-Z]+\]$ \[[a-zA-Z]+\]$;
+
+// function FinalRender({item}:{item: string}) {
+// 	const matchedStr = item.match(pattern);
+// 	console.log('Matched outside: ', matchedStr);
+
+// 	if (matchedStr){
+// 		console.log('Matched')
+// 		// const newItem = item?.replace(pattern, '')?.concat(matchedStr[0].slice(1,matchedStr[0].length - 1));
+// 		return (<>
+// 		<span>{item?.replace(pattern, '')}</span>
+// 		<span>{matchedStr[0].slice(1,matchedStr[0].length - 1)}</span>
+// 		</>);
+
+// 	}
+	
+// 	return (<span>{item}</span>);
+// }
 ---
 
 <Layout
@@ -64,14 +85,13 @@ const skills = [
 	description="Lorem ipsum dolor sit amet"
 	image="/blog-placeholder-about.jpg"
 >
-	<div class="mb-8 flex items-center justify-end border border-accent ">
-		<img class="size-full xl:size-[300px]" src="https://ik.imagekit.io/thepaulin/profile.4b2bbc9a463700b9bf98.png?updatedAt=1733003668030" />
-	</div>
+	<!-- <div class="mb-8 flex items-center justify-end border border-accent !h-[100px] w-full ">
+		<img class="size-full xl:size-[100px] h-[100px]" src="https://ik.imagekit.io/thepaulin/profile.4b2bbc9a463700b9bf98.png?updatedAt=1733003668030" />
+	</div> -->
+	<GradientBlocks />
 	<h1 class={titleClassNames}>ABOUT ME</h1>
 	<p>
-		Hi!👋 My name is <strong>Paulin Kubwira</strong>, I'm a full stack web developer with over 4 years of experience.
-		I had a chance to work diverse projects that challenged my skills for both collaboration, communication,
-		project management as well as technical skills.
+		Hi!👋 My name is <strong>Paulin Kubwira</strong>,  as a seasoned Full Stack Web Developer with over four years of experience, I have successfully delivered a wide range of innovative and high-impact projects. My expertise spans both front-end and back-end development, complemented by strong skills in collaboration, communication, and project management. I thrive in dynamic, fast-paced environments, consistently leveraging my technical proficiency and strategic problem-solving to drive exceptional outcomes for complex, cross-functional initiatives.
 	</p>
 	<PortfolioGetInTouch language="en" />
 	<a class="text-accent underline" href="https://ik.imagekit.io/thepaulin/CV-Paulin%20Kubwira-12-24.pdf?updatedAt=1733090102081" target="_blank">View & download my Resumé</a>
@@ -85,7 +105,7 @@ const skills = [
 	<h2 class={titleClassNames}>SKILLS</h2>
 	<ul class="list-inside list-disc pl-6">
 		{
-			skills?.map( (el) => (<li>{el}</li>))
+			skills?.map( (el) => (<ItemRender item={el} />))
 		}
 	</ul>
 	<h2 class={titleClassNames}>WORK</h2>
@@ -94,7 +114,7 @@ const skills = [
 			<h3 class={h3ClassNames}><strong class="text-accent">Bixlers</strong> - Full Stack Web developer (<a class="underline text-accent" href="https://www.bixlers.com" target="_blank">bixlers.com</a>, <a class="underline text-accent" href="https://www.perrywinkles.com" target="_blank">perrywinkles.com</a>)</h3>
 			<ul class="ist-inside list-disc pl-6 flex flex-col gap-2">
 				{
-					bixlersJobDescriptions?.map( (el) => (<li>{el}</li>))
+					bixlersJobDescriptions?.map( (el) => (<ItemRender item={el} />))
 				}
 			</ul>
 		</li>
@@ -114,5 +134,8 @@ const skills = [
 		if you like me!
 	</p> -->
 </Layout>
+
+
+
 
 

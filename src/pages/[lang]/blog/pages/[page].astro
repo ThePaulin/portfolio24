@@ -45,6 +45,7 @@ interface Props {
 }
 
 const { page, tags } = Astro.props;
+const { lang } = Astro.params;
 
 const meta = {
 	title: "Posts",
@@ -107,7 +108,7 @@ const paginationProps = {
 					))}
 				</ul>
 				<a
-					href="/tags"
+					href={`/${lang}/tags`}
 					class="cody-link"
 					aria-label="View all blog tags"
 				>

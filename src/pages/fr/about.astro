@@ -3,6 +3,8 @@ import Layout from "@/layouts/Base";
 import { titleClassNames, type PortfolioProjectType } from "../en/about.astro";
 import PortfolioProjectCard, { h3ClassNames } from "@/components/PortfolioProjectCard";
 import PortfolioGetInTouch from "@/components/PortfolioGetInTouch";
+import GradientBlocks from "@/components/GradientBlocks";
+import ItemRender from "@/components/ItemRender";
 
 const projects: PortfolioProjectType[] = [
 	{
@@ -26,24 +28,23 @@ const projects: PortfolioProjectType[] = [
 ]
 
 const bixlersJobDescriptions = [
-	'Développer et maintenir des applications Web de commerce électronique Shopify robustes et évolutives, en tirant parti des technologies frontales de pointe (React JS via le framework Shopify Hydrogen) et back-end (Node JS).',
-	'Collaborer avec des équipes interfonctionnelles, rassembler les exigences et les traduire de manière experte en solutions techniques.',
-	'Mettre en œuvre des interfaces réactives, accessibles et conviviales.',
-	'Utiliser la methodologie Agile (Jira) et Sonar Cloud pour rationaliser le développement, améliorer la productivité et améliorer la qualité du code à 85 %.',
-	'Résolver rapidement les problèmes techniques, en minimisant les perturbations des délais du projet.',
-	'Effectuer des tests, du débogage et des services et API tiers intégrés (API REST et API GraphQL)',
-	'Participer activement aux revues de code, en garantissant la qualité et la cohérence du code.',
-	'Rester à jour avec les tendances et technologies émergentes en matière de développement Web.',
+	'Concevoir, développer et maintenir des applications eCommerce Shopify performantes et évolutives en utilisant des technologies front-end modernes (React.js avec le framework Shopify Hydrogen) et back-end (Node.js).',
+	"Collaborer avec des équipes pluridisciplinaires pour recueillir les exigences et les traduire en solutions techniques robustes, en mettant l'accent sur l'évolutivité et la maintenabilité.",
+	'Concevoir et implémenter des interfaces utilisateur responsives, accessibles et intuitives, conformes aux normes WCAG et optimisées pour une compatibilité multi-appareils.',
+	'Exploiter les méthodologies Agile (Jira) et SonarCloud pour optimiser les flux de développement, améliorant la qualité du code de 85 % et accélérant les délais de livraison.',
+	"Diagnostiquer et résoudre proactivement des problèmes techniques complexes, minimisant l'impact sur les jalons du projet et la stabilité en production.",
+	'Effectuer des tests rigoureux, déboguer et intégrer de manière fluide des services tiers via des API REST et GraphQL, garantissant fiabilité et performance du système.',
+	"Diriger et participer aux revues de code, en appliquant les normes de codage, améliorant la maintenabilité et promouvant une culture d'excellence technique.",
+	"Rester à la pointe des tendances de l'industrie, évaluer et adopter les technologies émergentes de développement web pour maintenir un avantage concurrentiel.",
 ]
 
 const skills = [
-	'JavaScript/TypeScript',
-	'HTML, CSS',
-	'React, Remix, Next.js, Astro, Angular',
-	'Node.js (Express), Go (Gin), Python (Flask)',
-	'Testes unitaire et E2E (Vite test, Jest, Cypress)',
-	'C#(ASP.NET)',
-	'AWS, GCP, Azule, Shopify Oxygen, Netlify, Vercel',
+	'JavaScript/TypeScript, Python, Go, C#, PHP, Java, C/C++ [LANGUAGES]',
+	'HTML, CSS [SPÉCIFIQUE AU WEB]',
+	'React, Remix, Next.js, Astro, Angular [JAVASCRIPT FRAMEWORKS]',
+	'Node.js (Express), C#(ASP.NET), Go (Gin), Python (Flask) [BACKEND FRAMEWORKS]',
+	'Testes unitaire et E2E (Vite test, Jest, Cypress) [TESTING]',
+	'AWS, GCP, Azule, Shopify Oxygen, Netlify, Vercel [CLOUD PLATFORMS]',
 ]
 ---
 
@@ -52,14 +53,10 @@ const skills = [
 	description="Lorem ipsum dolor sit amet"
 	image="/blog-placeholder-about.jpg"
 >
-	<div class="mb-8 flex items-center justify-end border border-accent ">
-		<img class="size-full xl:size-[300px]" src="https://ik.imagekit.io/thepaulin/profile.4b2bbc9a463700b9bf98.png?updatedAt=1733003668030" />
-	</div>
-	<h1 class="title">À propos</h1>
+    <GradientBlocks />
+	<h1 class={titleClassNames}>À PROPOS</h1>
 	<p>
-		Salut! Je m'appelle <strong>Paulin Kubwira</strong>, je suis un développeur web full stack avec plus de 4 ans d'expérience.
-		J'ai eu la chance de travailler sur divers projets qui ont mis à l'épreuve mes compétences en matière de collaboration, de communication,
-gestion de projet ainsi que des compétences techniques.
+		Salut! Je m'appelle <strong>Paulin Kubwira</strong>, en tant que développeur web full stack expérimenté avec plus de quatre ans d'expérience, j'ai livré avec succès une vaste gamme de projets innovants et à fort impact. Mon expertise couvre le développement front-end et back-end, complétée par de solides compétences en collaboration, communication et gestion de projets. Je m'épanouis dans des environnements dynamiques et rapides, en tirant parti de ma maîtrise technique et de mes compétences en résolution de problèmes stratégiques pour obtenir des résultats exceptionnels dans des initiatives complexes et transversales.
 	</p>
 	<PortfolioGetInTouch language="fr" />
 	<a class="text-accent underline" href="https://ik.imagekit.io/thepaulin/CV-Paulin%20Kubwira-12-24.pdf?updatedAt=1733090102081" target="_blank">Voir et télécharger mon CV</a>
@@ -74,7 +71,7 @@ gestion de projet ainsi que des compétences techniques.
 	<h2 class={titleClassNames}>COMPÉTENCES</h2>
 	<ul class="list-inside list-disc pl-6">
 		{
-			skills?.map( (el) => (<li>{el}</li>))
+			skills?.map( (el) => (<ItemRender item={el} />))
 		}
 	</ul>
 	<h2 class={titleClassNames}>TRAVAIL</h2>
@@ -83,7 +80,7 @@ gestion de projet ainsi que des compétences techniques.
 			<h3 class={h3ClassNames}><strong class="text-accent">Bixlers</strong> - Full Stack Web developer (<a class="underline text-accent" href="https://www.bixlers.com" target="_blank">bixlers.com</a>, <a class="underline text-accent" href="https://www.perrywinkles.com" target="_blank">perrywinkles.com</a>)</h3>
 			<ul class="ist-inside list-disc pl-6 flex flex-col gap-2">
 				{
-					bixlersJobDescriptions?.map( (el) => (<li>{el}</li>))
+					bixlersJobDescriptions?.map( (el) => (<ItemRender item={el} />))
 				}
 			</ul>
 		</li>
