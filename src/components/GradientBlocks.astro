@@ -20,8 +20,7 @@ const totalWidth = blocks.reduce((sum, block) => sum + block.width, 0);
         <div class="flex h-[300px] flex-1 md:mr-4">
           {blocks.map((block, index) => (
             <div
-              key={index}
-              className="h-full"
+              class="h-full"
               style={{
                 backgroundColor: `#812ae4`,
                 opacity: block.opacity,

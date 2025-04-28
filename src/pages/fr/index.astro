@@ -20,32 +20,32 @@ const filteredPostsByLanguage = filterByLanguage(allPostsByPinned, "fr").slice(0
 const tech: Array<{ title: string; desc: string; href: string }> = [
 	{
 		title: "Astro",
-		desc: "Crea sitios web rápidos, más rápido.",
+		desc: "Créez des sites Web rapides, plus rapidement.",
 		href: "https://astro.build",
 	},
 	{
 		title: "Astro Assets",
-		desc: "Compatibilidad con activos optimizados integrados.",
+		desc: "Prise en charge des ressources optimisées intégrée.",
 		href: "https://docs.astro.build/en/guides/assets/",
 	},
 	{
 		title: "Tailwind CSS",
-		desc: "Crea sitios web modernos rápidamente sin tener que abandonar el HTML.",
+		desc: "Créez rapidement des sites Web modernes sans jamais quitter votre HTML.",
 		href: "https://tailwindcss.com",
 	},
 	{
 		title: "Markdown",
-		desc: "Lenguaje de marcado simple y fácil de usar.",
+		desc: "Langage de balisage simple et facile à utiliser.",
 		href: "https://www.markdownguide.org/",
 	},
 	{
 		title: "MDX",
-		desc: "Markdown para la era de los componentes.",
+		desc: "Markdown pour l'ère des composants.",
 		href: "https://mdxjs.com/",
 	},
 	{
 		title: "Astro Icon",
-		desc: "Un componente de ícono fácil de usar para Astro.",
+		desc: "Un composant d'icône facile à utiliser pour Astro.",
 		href: "https://github.com/natemoo-re/astro-icon#readme",
 	},
 ];
@@ -61,7 +61,7 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 	</section>
 
 	<section class="mt-8 sm:mt-16">
-		<h2 class="title">Lectures Géniales</h2>
+		<h2 class="title">Lectures Géniales👇</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				filteredPostsByLanguage.map((p) => (
@@ -71,7 +71,7 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 		</ul>
 	</section>
 
-	<!-- <section class="mt-16 mb-4">
+	<section class="mt-16 mb-4">
 		<h2 class="title">Technologies</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
@@ -90,7 +90,7 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 				))
 			}
 		</ul>
-	</section> -->
+	</section>
 
 	<!-- <hr />
 	<section class="">
