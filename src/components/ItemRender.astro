@@ -5,7 +5,6 @@ const {item} = Astro.props;
 const pattern =  /\[[a-zA-Z0-9_ ]+\]/g
 
 const matchedStr = item.match(pattern);
-	console.log('Matched outside: ', matchedStr);
 ---
 <li>
 		<span>{item?.replace(pattern, '')}</span>

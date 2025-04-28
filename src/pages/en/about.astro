@@ -59,25 +59,6 @@ const skills = [
 
 ]
 
-// const pattern =  /\[[a-zA-Z0-9_ ]+\]/g
-// // new RegExp(`\[[a-zA-Z]+\]$`);  //\[[a-zA-Z]+\]$ \[[a-zA-Z]+\]$;
-
-// function FinalRender({item}:{item: string}) {
-// 	const matchedStr = item.match(pattern);
-// 	console.log('Matched outside: ', matchedStr);
-
-// 	if (matchedStr){
-// 		console.log('Matched')
-// 		// const newItem = item?.replace(pattern, '')?.concat(matchedStr[0].slice(1,matchedStr[0].length - 1));
-// 		return (<>
-// 		<span>{item?.replace(pattern, '')}</span>
-// 		<span>{matchedStr[0].slice(1,matchedStr[0].length - 1)}</span>
-// 		</>);
-
-// 	}
-	
-// 	return (<span>{item}</span>);
-// }
 ---
 
 <Layout
@@ -85,9 +66,6 @@ const skills = [
 	description="Lorem ipsum dolor sit amet"
 	image="/blog-placeholder-about.jpg"
 >
-	<!-- <div class="mb-8 flex items-center justify-end border border-accent !h-[100px] w-full ">
-		<img class="size-full xl:size-[100px] h-[100px]" src="https://ik.imagekit.io/thepaulin/profile.4b2bbc9a463700b9bf98.png?updatedAt=1733003668030" />
-	</div> -->
 	<GradientBlocks />
 	<h1 class={titleClassNames}>ABOUT ME</h1>
 	<p>
