@@ -12,10 +12,10 @@ export default {
             text: "Paulin Kubwira"
         },
         "site.description": {
-            text: "My name is Paulin Kubwira, I'm a full stack web developer. Let's buiild something awesome together!"
+            text: "My name is Paulin Kubwira, I'm a full stack web developer. Let's build something awesome together!"
         },
         "profile.description": {
-            text: "My name is Paulin Kubwira, I'm a full stack web developer. Let's buiild something awesome together!"
+            text: "My name is Paulin Kubwira, I'm a full stack web developer. Let's build something awesome together!"
         },
         "blog.lastUpdated": {
             text: "Last updated:"
