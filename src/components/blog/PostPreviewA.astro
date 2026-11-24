@@ -11,7 +11,8 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 };
 
 const { post, withDesc = false } = Astro.props;
-const postDate = post.data.updatedDate ?? post.data.pubDate;
+const updatedDate = "updatedDate" in post.data ? post.data.updatedDate : undefined;
+const postDate = updatedDate ?? post.data.pubDate;
 const lang = getLangFromUrl(Astro.url);
 const slug = getSlugFromCollectionEntry(post);
 const pinned: boolean = !!post.data.order;
